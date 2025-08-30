@@ -326,7 +326,7 @@ class YOLOParkingDetector:
         
         return occupancy_score > 0.42
 
-    def process_video(self, video_path, output_video="../public/data/enhanced_yolo_parking.mp4", csv_path="../public/data/parking_analysis.csv"):
+    def process_video(self, video_path, output_video="enhanced_yolo_parking.mp4", csv_path="parking_analysis.csv"):
         """Enhanced video processing with improved detection"""
         if not self.parking_spaces:
             print("❌ No parking spaces defined! Run space selection first.")

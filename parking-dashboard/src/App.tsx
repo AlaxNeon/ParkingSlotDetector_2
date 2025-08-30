@@ -3,7 +3,7 @@ import { Car, Users, CheckCircle, AlertCircle } from "lucide-react";
 
 // Utility: Load CSV into JS object
 const loadCSV = async (fileName: string) => {
-  const response = await fetch(`/data/${fileName}`);
+  const response = await fetch(`/model/${fileName}`);
   const text = await response.text();
   const rows = text.trim().split("\n");
   const headers = rows[0].split(",");
@@ -72,7 +72,7 @@ const VideoDisplay = ({ videoRef }) => (
   <div className="bg-white p-4 h-full flex items-center justify-center">
     <video
       ref={videoRef}
-      src="/data/enhanced_yolo_parking.mp4"
+      src="/model/enhanced_yolo_parking.mp4"
       controls
       muted
       className="rounded-lg w-full h-full"
